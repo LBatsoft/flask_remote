@@ -60,3 +60,9 @@ def route_request():
     except Exception as err:
         print(err)
         return jsonify({"code": -1, "msg": "后台错误:" + str(err), "result": []})
+
+
+@csrf.exempt
+@doctor_bp.route('/health', methods=['GET'])
+def health_check():
+    return 'OK'
