@@ -55,7 +55,7 @@ def route_request():
         data.pop('local_url')
         print(data)
         res = requests.post(url, json=data, timeout=10)
-
+        print(res.text)
         return res.text
     except Exception as err:
         print(err)
