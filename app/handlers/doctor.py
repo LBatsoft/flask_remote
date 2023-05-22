@@ -66,3 +66,10 @@ def route_request():
 @doctor_bp.route('/health', methods=['GET'])
 def health_check():
     return 'OK'
+
+
+@csrf.exempt
+@doctor_bp.route('/get_user', methods=['GET'])
+def get_user():
+    user_id = request.args.get("box_id")
+    return user_id
