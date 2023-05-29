@@ -1,4 +1,5 @@
 import telnetlib
+import time
 
 from flask import Response, Blueprint, render_template, request, jsonify
 import datetime
@@ -73,3 +74,10 @@ def health_check():
 def get_user():
     user_id = request.args.get("box_id")
     return user_id
+
+
+@csrf.exempt
+@doctor_bp.route('/get_timestamp', methods=['GET'])
+def get_user():
+    timestamp = int(time.time())
+    return timestamp
