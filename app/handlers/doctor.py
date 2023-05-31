@@ -81,3 +81,9 @@ def get_user():
 def get_user():
     timestamp = int(time.time())
     return timestamp
+
+@csrf.exempt
+@doctor_bp.route('/put_user', methods=['GET'])
+def get_user():
+    timestamp = int(time.time())
+    return 'OK'
