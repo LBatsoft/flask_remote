@@ -78,12 +78,12 @@ def get_user():
 
 @csrf.exempt
 @doctor_bp.route('/get_timestamp', methods=['GET'])
-def get_user():
+def get_timestamp():
     timestamp = int(time.time())
     return timestamp
 
 @csrf.exempt
 @doctor_bp.route('/put_user', methods=['GET'])
-def get_user():
+def put_user():
     timestamp = int(time.time())
     return 'OK'
