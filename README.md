@@ -1,6 +1,6 @@
 # Project Title
 
-CS NOTES
+flask_remote
 
 ## Getting Started
 
