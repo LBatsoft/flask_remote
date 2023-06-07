@@ -85,5 +85,6 @@ def get_timestamp():
 @csrf.exempt
 @doctor_bp.route('/put_user', methods=['GET'])
 def put_user():
-    timestamp = int(time.time())
-    return 'OK'
+    user_id = request.args.get("box_id")
+    # 存入db
+    return user_id
