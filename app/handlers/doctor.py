@@ -41,10 +41,10 @@ def valid_mail_server(mail_server: str, mail_port: int) -> str:
 @doctor_bp.route('/activate_box', methods=['GET'])
 async def activate_box():
     box_id = request.args.get("box_id")
-    # res = OrgTpEmail.query.filter(OrgTpEmail.id == int(box_id)).update({OrgTpEmail.valid: 1, OrgTpEmail.active: 1},
-    #                                                                    synchronize_session=False)
 
     return {'status': 1, 'message': '修改成功'}
+
+
 
 
 @csrf.exempt
