@@ -44,7 +44,10 @@ async def activate_box():
 
     return {'status': 1, 'message': '修改成功'}
 
-
+@csrf.exempt
+@doctor_bp.route('/whoami',methods=['GET'])
+async def whoami():
+    return {'code':200, 'user':get_user}
 
 
 @csrf.exempt
