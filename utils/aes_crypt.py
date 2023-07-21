@@ -14,8 +14,8 @@ def _pad(s):
 
 
 def _cipher():
-    key = '4321432143214321'.encode()
-    iv = '1234123412341234'.encode()
+    key = 'ss123123123423'.encode()
+    iv = 'fd233423sdfs'.encode()
     return AES.new(key=key, mode=AES.MODE_CBC, IV=iv)
 
 
