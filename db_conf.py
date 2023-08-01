@@ -1,8 +1,8 @@
 # ========================== MySql
-MYSQLHOST = ''
-MYSQLPORT = ''
-MYSQLDATABASE = ''
-MYSQLUSER = ''
+MYSQLHOST = '127.0.0.1'
+MYSQLPORT = 3306
+MYSQLDATABASE = 'flask_remote'
+MYSQLUSER = 'flask_remote'
 MYSQLPASSWORD = ''
 
 MYSQLHOST_MAGE = ''
