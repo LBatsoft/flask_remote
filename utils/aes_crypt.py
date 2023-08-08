@@ -3,7 +3,7 @@ import json
 from Crypto.Cipher import AES
 import time
 import re
-from binascii import b2a_hex,a2b_hex, Error
+from binascii import b2a_hex, a2b_hex, Error
 
 
 def _pad(s):
@@ -35,10 +35,9 @@ def aes_decrypt(data):
 
 
 if __name__ == '__main__':
-    t= int(time.time())*1000
+    t = int(time.time()) * 1000
     check_by = '17611158275'
     tp_id = 55
-    print('密文:', en_text)
     tokens = "9e5600246d4d75212a00840411f60171e2370462b604ca104785735b8bdb858c46e0b740d7c3e228da4700accccc8535736efc8cc7e4e9ce2f975bcc335f761bcc7484f50882141ab2e361291ca7e03b"
     token = "adfaadfadfasdf"
     print('明文:', aes_decrypt(tokens))
