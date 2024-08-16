@@ -24,4 +24,11 @@ async def activate_box():
 @doctor_bp.route('ai_contact', methods=['GET'])
 async def ai_contact():
     # ignore
-    return {'status':1, 'message':"test"}
+    return {'status': 1, 'message': "test"}
+
+
+@doctor_bp.route('ai_contact', methods=['POST'])
+async def ai_contact():
+    data = request.json
+    print(data)
+    return {'status': 1, 'message': data.get('message')}
