@@ -26,3 +26,10 @@ def get_user():
 def get_gpt_token():
     token_id = request.args.get("token_id")
     return token_id @ csrf.exempt
+
+
+@csrf.exempt
+@gpt_bp.route('/get_gpt_version', methods=['GET'])
+def get_gpt_version():
+    version_id = request.args.get("version_id")
+    return version_id @ csrf.exempt
