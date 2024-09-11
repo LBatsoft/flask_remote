@@ -32,3 +32,10 @@ async def ai_contact():
     data = request.json
     print(data)
     return {'status': 1, 'message': data.get('message')}
+
+
+@doctor_bp.route('ai_translate', methods=['POST'])
+async def ai_translate():
+    data = request.json
+    await data.get()
+    return {'status': 1, 'message': data.get('message')}
