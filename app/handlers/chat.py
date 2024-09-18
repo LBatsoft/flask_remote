@@ -38,4 +38,7 @@ async def ai_contact():
 async def ai_translate():
     data = request.json
     await data.get()
+    import datetime
+    current_time = datetime.datetime.now()
+    pass
     return {'status': 1, 'message': data.get('message')}
