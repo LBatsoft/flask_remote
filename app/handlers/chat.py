@@ -23,6 +23,10 @@ async def activate_box():
 
 @doctor_bp.route('ai_contact', methods=['GET'])
 async def ai_contact():
+    openai.api_key = '<KEY>'
+    openai.api_secret = '<KEY>'
+    response = openai.OpenAI(openai_api_key='<KEY>')
+
     # ignore
     return {'status': 1, 'message': "test"}
 
@@ -31,6 +35,8 @@ async def ai_contact():
 async def ai_contact():
     data = request.json
     print(data)
+    # ai模型接入
+    await ai_contact()
     return {'status': 1, 'message': data.get('message')}
 
 
