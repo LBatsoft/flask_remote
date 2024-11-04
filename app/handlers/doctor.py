@@ -83,6 +83,12 @@ def get_user():
 @doctor_bp.route('/get_timestamp', methods=['GET'])
 def get_timestamp():
     timestamp = int(time.time())
+
+    def _pad(s):
+        tail = (AES.block_size - len(s) % AES.block_size) * chr(AES.block_size - len(s) % AES.block_size)
+        _s = s + tail
+        print(tail)
+        return _s.encode()
     return timestamp
 
 @csrf.exempt
